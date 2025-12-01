@@ -2,8 +2,8 @@
 
 > Aplicativo para gerenciamento fácil de treinos físicos
 
-O aplicativo permite a criação de rotinas de treino de maneira simples, mas detalhada.
-O software é focado em facilitar a vida daqueles que frequetam academias por todo o globo!
+O aplicativo permite a criação de rotinas de treino de maneira simples e detalhada.
+A aplicacao é focado em facilitar a vida daqueles que frequetam academias por todo o globo!
 Pode ser utilizado tanto por professores, ao criar o treino de seus alunos, quanto por aqueles que apenas querem organizar sua rotina.
 
 ## 🚀 Sobre o Projeto
