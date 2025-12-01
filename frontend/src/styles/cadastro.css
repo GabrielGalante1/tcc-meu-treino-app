@@ -1,0 +1,166 @@
+/* 1. Importa os estilos base do fluxo de login (fundo gradiente, botões, header) */
+@import url('login.css');
+
+
+/* --- ★★★ AJUSTE DE LARGURA DA PÁGINA DE CADASTRO ★★★ --- */
+.login-container {
+    /* Aumenta a largura máxima do container nesta página
+       de 384px (padrão do login.css) para 420px (um pouco mais largo) */
+    max-width: 420px;
+}
+
+/* No desktop, o layout do app (sidebar, etc.) não se aplica,
+   então apenas mantemos o container de login centralizado e um pouco maior */
+@media (min-width: 768px) {
+    .login-container {
+        max-width: 450px;
+    }
+}
+
+/* --- Fim do Ajuste de Largura --- */
+
+
+/* --- Estilos da Página de Cadastro --- */
+
+/* Garante que o conteúdo role no desktop (se necessário) */
+@media (min-width: 768px) {
+    .content-wrapper {
+        flex-grow: 1;
+        height: 100%;
+        overflow-y: auto;
+        /* Permite rolagem do formulário */
+    }
+}
+
+/* Subtítulo da página de cadastro */
+.page-subtitle-cadastro {
+    color: #FED7AA;
+    /* Laranja claro */
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+/* --- Estilos do Formulário (Adaptados de login.css para manter consistência) --- */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Caixa branca para cada seção - Mantendo estilo do login.css */
+.form-section {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Labels */
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.25rem;
+    margin-left: 0.25rem;
+}
+
+/* Inputs - Estilo Premium do Login */
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #F3F4F6;
+    color: #1F2937;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 0 2px #F97316, 0 4px 6px -1px rgba(249, 115, 22, 0.1);
+}
+
+/* Input de Data */
+input[type="date"] {
+    color: #374151;
+}
+
+/* Wrapper para o ícone de senha */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper .form-input {
+    padding-right: 3rem;
+}
+
+.password-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9CA3AF;
+    cursor: pointer;
+}
+
+/* Botão de Cadastro/Próximo */
+.btn-primary {
+    margin-top: 1rem;
+    background-color: #F97316;
+    /* Laranja Premium */
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.3);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #EA580C;
+    box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.4);
+}
+
+/* Botão de Voltar (Seta) */
+.role-back-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.role-back-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.role-back-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.login-header-role {
+    position: relative;
+    /* Para posicionar o botão de voltar */
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 3rem;
+    /* Espaço para o botão não sobrepor o texto */
+}

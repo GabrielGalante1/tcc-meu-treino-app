@@ -1,0 +1,66 @@
+@import url('base.css');
+@import url('header.css'); /* Importa os estilos do header */
+
+/* --- Estilos da Página Treinos --- */
+
+/* Card de Dica */
+a.dicas-card-link {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+    margin-bottom: 1.5rem; 
+    border-radius: 0.75rem; 
+}
+
+.dicas-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; 
+}
+
+a.dicas-card-link:hover .dicas-card {
+    transform: scale(1.02); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.dicas-card img {
+    width: 100%;
+    height: 25rem; 
+    object-fit: cover;
+    display: block; 
+}
+
+.dicas-card-content {
+    padding: 0.5rem;
+}
+
+.dicas-card-content h3 {
+    font-size: 1.425rem; 
+    padding-left: 10px;
+    font-weight: 700; 
+    color: #1F2937; 
+}
+
+.dicas-card-content p {
+    font-size: 1.175rem; 
+    color: #6B7280;
+    margin-top: 0.25rem;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.espacamento{
+    height: 15px;
+}
+
+.botao-junto {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.botao-junto .btn {
+    margin-top: 0;
+}

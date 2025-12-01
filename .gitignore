@@ -1,0 +1,33 @@
+# Arquivos de ambiente virtual do Python
+backend/venv/
+
+# Arquivos de cache e compilados do Python
+backend/__pycache__/
+backend/*.pyc
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Pasta de dependências do Node.js (MUITO IMPORTANTE)
+frontend/node_modules/
+
+# Arquivos de log do npm
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Arquivos de build do frontend
+frontend/build/
+frontend/dist/
+
+# Arquivos de ambiente (onde senhas podem ser guardadas)
+.env
+*.env
+
+# Arquivos de log
+*.log

@@ -1,0 +1,284 @@
+@import url('base.css');
+@import url('header.css');
+/* Importa os estilos do header */
+
+/* --- Estilos da Página Home --- */
+
+/* Subtítulo abaixo do título principal */
+.page-subtitle {
+    font-size: 1.125rem;
+    color: #FED7AA;
+    margin-top: 0.25rem;
+}
+
+
+/* Card "Resumo Semanal" que fica dentro do Header */
+.header-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-top: 1.5rem;
+    color: #374151;
+    /* Reseta a cor do texto */
+}
+
+.header-card h2 {
+    color: #1F2937;
+    /* Reseta a cor do título */
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.header-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.header-card .warning {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #CA8A04;
+    margin-top: 0.75rem;
+}
+
+.header-card .warning span {
+    margin-right: 0.5rem;
+}
+
+
+/* Lista da Semana */
+.week-list h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Estilo do link que envolve o item */
+a.week-list-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+/* Efeito Hover */
+a.week-list-item-link:hover .week-list-item {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilo visual do item (div interno) */
+.week-list-item {
+    background-color: white;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+
+.week-list-item-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    padding-right: 0.75rem;
+    border-right: 1px solid #E5E7EB;
+    flex-shrink: 0;
+}
+
+.week-list-item-icon .icon-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.week-list-item-icon .icon-red {
+    background-color: #FEE2E2;
+    color: #EF4444;
+}
+
+.week-list-item-icon .icon-green {
+    background-color: #D1FAE5;
+    color: #10B981;
+}
+
+.week-list-item-icon .icon-gray {
+    background-color: #E5E7EB;
+    color: #6B7280;
+}
+
+.week-list-item-icon .day {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.week-list-item-icon .date {
+    font-size: 0.75rem;
+    color: #6B7280;
+}
+
+.week-list-item-content {
+    flex-grow: 1;
+}
+
+.week-list-item-content p {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #E5E7EB;
+    border-radius: 9999px;
+    height: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.progress-bar div {
+    height: 100%;
+    border-radius: 9999px;
+    background-color: #22C55E;
+}
+
+.week-list-item-content .progress-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.week-list-item-content .progress-text .subtext {
+    font-size: 0.75rem;
+    color: #6B7280;
+    font-weight: 400;
+}
+
+.week-list-item-content .progress-text .percent {
+    font-size: 0.75rem;
+    color: #166534;
+    font-weight: 700;
+}
+
+.week-list-item .arrow-icon {
+    color: #D1D5DB;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.week-list-item.today {
+    border: 2px solid #3B82F6;
+}
+
+/* --- TEMA DE ADMIN (Cinza) --- */
+/* --- TEMA DE ADMIN (Cinza) --- */
+body.admin-theme {
+    background-color: #F3F4F6;
+    /* Gray 100 */
+}
+
+body.admin-theme .page-header {
+    background-color: #374151;
+    /* Gray 700 */
+}
+
+body.admin-theme .page-subtitle {
+    color: #D1D5DB;
+    /* Gray 300 */
+}
+
+body.admin-theme .sidebar-nav .logo {
+    color: #374151;
+    /* Gray 700 */
+}
+
+body.admin-theme .sidebar-nav-list a.active {
+    background-color: #E5E7EB;
+    /* Gray 200 */
+    color: #111827;
+    /* Gray 900 */
+}
+
+body.admin-theme .mobile-nav a.active {
+    color: #374151;
+    /* Gray 700 */
+}
+
+body.admin-theme .btn-primary {
+    background-color: #4B5563;
+    /* Gray 600 */
+}
+
+body.admin-theme .btn-primary:hover {
+    background-color: #374151;
+    /* Gray 700 */
+}
+
+body.admin-theme .week-list-item.today {
+    border-color: #9CA3AF;
+    /* Gray 400 */
+}
+
+
+/* --- TEMA DE INSTRUTOR (Azul Escuro) --- */
+body.instrutor-theme {
+    background-color: #EFF6FF;
+    /* Blue 50 */
+}
+
+body.instrutor-theme .page-header {
+    background-color: #1E3A8A;
+    /* Blue 900 */
+}
+
+body.instrutor-theme .page-subtitle {
+    color: #BFDBFE;
+    /* Blue 200 */
+}
+
+body.instrutor-theme .sidebar-nav .logo {
+    color: #1E3A8A;
+    /* Blue 900 */
+}
+
+body.instrutor-theme .sidebar-nav-list a.active {
+    background-color: #DBEAFE;
+    /* Blue 100 */
+    color: #1E40AF;
+    /* Blue 800 */
+}
+
+body.instrutor-theme .mobile-nav a.active {
+    color: #1E3A8A;
+    /* Blue 900 */
+}
+
+body.instrutor-theme .btn-primary {
+    background-color: #2563EB;
+    /* Blue 600 */
+}
+
+body.instrutor-theme .btn-primary:hover {
+    background-color: #1D4ED8;
+    /* Blue 700 */
+}
+
+body.instrutor-theme .week-list-item.today {
+    border-color: #60A5FA;
+    /* Blue 400 */
+}

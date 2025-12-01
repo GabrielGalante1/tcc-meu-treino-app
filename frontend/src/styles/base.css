@@ -1,0 +1,315 @@
+/* Importa a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html {
+    height: 100%;
+}
+
+/* Navegação Mobile */
+.mobile-nav {
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    width: 90%;
+    max-width: 384px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 9999px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    z-index: 10;
+}
+
+.mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6B7280;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    width: 5rem;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.mobile-nav a.active {
+    color: #F97316;
+    font-weight: 600;
+}
+
+/* --- Reset Global e Padrões --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E5E7EB;
+    /* cinza-200 (fundo fora do app) */
+    color: #374151;
+    /* gray-700 */
+    padding: 0;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    /* bold */
+    color: #1F2937;
+    /* gray-900 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Estrutura Principal (Mobile-First) --- */
+.app-container {
+    width: 100%;
+    max-width: 384px;
+    /* max-w-sm */
+    min-height: 0;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: #F3F4F6;
+    /* gray-100 */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav {
+    display: none;
+    /* Escondido no mobile */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Ocupa todo o espaço disponível */
+    height: 100%;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 1.5rem;
+    /* p- */
+    /* Deixa espaço para a barra de navegação mobile fixa */
+    padding-bottom: 80px;
+    /* <--- Espaço para a BottomNav */
+    overflow-y: auto;
+}
+
+/* --- Layout de Desktop --- */
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+    }
+
+    .app-container {
+        flex-direction: row;
+        max-width: 1100px;
+        min-height: 0;
+        height: 90vh;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-color: #FFFFFF;
+        ;
+    }
+
+    /* BARRA LATERAL FIXA */
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        flex-shrink: 0;
+        background-color: #F9FAFB;
+        padding: 1.5rem;
+        border-right: 1px solid #E5E7EB;
+        height: 90vh;
+        border-radius: 0.75rem 0 0 0.75rem;
+
+    }
+
+    .sidebar-nav .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #F97316;
+        margin-bottom: 2rem;
+    }
+
+    .sidebar-nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .sidebar-nav-list a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        color: #4B5563;
+    }
+
+    .sidebar-nav-list a:hover {
+        background-color: #E5E7EB;
+    }
+
+    .sidebar-nav-list a.active {
+        background-color: #FFEDD5;
+        color: #EA580C;
+    }
+
+    .sidebar-nav-list a svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    /* CONTEÚDO ROLÁVEL */
+    .content-wrapper {
+        flex-grow: 1;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .main-content {
+        background-color: #efefef;
+        /* Cor que você definiu */
+        position: relative;
+        padding-bottom: 1.5rem;
+        /* Reset padding for desktop */
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
+
+
+/* --- Componentes Comuns (Exceto Header) --- */
+
+/* Botões */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 9999px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #3B82F6;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: #4E89CA;
+    font-weight: 1000;
+    color: #4E89CA;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.btn-primary:hover {
+    background-color: #2563EB;
+}
+
+.btn-danger {
+    background-color: rgb(255, 255, 255);
+    color: #fc2323;
+    font-weight: 700;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    border-color: rgba(255, 0, 0, 0.393);
+    max-width: 30vh;
+    position: absolute;
+    left: 35vh;
+    top: 59vh;
+}
+
+.btn-danger:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
+}
+
+.btn-padrao {
+    background-color: white;
+    color: #374151;
+    font-weight: 500;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+}
+
+
+/* Cards Genéricos */
+.card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.card h2 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.card .warning {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #CA8A04;
+    margin-top: 0.75rem;
+}
+
+.card .warning span {
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,55 @@
+@import url('base.css');
+@import url('header.css'); /* Importa os estilos do header */
+
+/* --- Estilos da Página da Dica Específica --- */
+
+/* Ajuste no título principal da página */
+.page-header .page-title {
+    font-size: 1.875rem; 
+    line-height: 2.25rem;
+}
+
+.dica-content {
+     background-color: white; 
+     padding: 1.5rem;
+     border-radius: 0 0 0.75rem 0.75rem; 
+}
+
+/* No mobile, remove fundo e padding */
+@media (max-width: 767px) {
+    .dica-content {
+        background-color: transparent;
+        padding: 0; 
+    }
+}
+
+.dica-content h2 {
+    font-size: 1.5rem; 
+    line-height: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1F2937; 
+}
+
+.dica-content p {
+    font-size: 1rem; 
+    line-height: 1.75rem; 
+    margin-bottom: 1rem;
+    color: #4B5563; 
+}
+
+.dica-content img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; 
+    object-fit: cover;
+    border-radius: 0.5rem; 
+    margin-bottom: 1.5rem;
+    display: block; 
+}
+
+.dica-content p strong {
+    font-weight: 600; 
+    color: #1F2937; 
+}
+

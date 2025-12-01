@@ -1,0 +1,15 @@
+Objetivos a serem atingidos:
+interface(vou fazer hoje)
+{
+    --------------------------------------------------Comecar a organizar com o backend!!!!!
+}
+Backend e cia(amanha)
+{
+    -Baixar, configurar, executar
+}
+
+
+Problemas!!
+-Cadastro redireciona para pagina em branco.
+-Finalizar cadastro de treino tambem.
+-Adicionar exercicio nao esta funcionando.

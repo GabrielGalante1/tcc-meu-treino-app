@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo - Cadastro</title>
+    <!-- Link para o CSS de cadastro -->
+    <link rel="stylesheet" href="../css/cadastro.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-body"> <!-- Usa o fundo gradiente do login -->
+
+    <div class="login-container"> <!-- Este container será mais largo -->
+
+        <!-- NAVEGAÇÃO DESKTOP (Invisível) -->
+        <nav class="sidebar-nav" style="display: none;"></nav>
+
+        <!-- CONTEÚDO ROLÁVEL -->
+        <div class="content-wrapper"> <!-- Wrapper principal para rolagem -->
+            
+            <!-- Cabeçalho (Estilo da página de login) -->
+            <header class="login-header-role">
+                <a href="login.html" class="role-back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <h1 class="logo-title">Cadastre-se.</h1>
+            </header>
+
+            <!-- Formulário de Cadastro (Estilo da página de Criar Treino) -->
+            <main class="main-content">
+                <p class="page-subtitle-cadastro">É Obrigatório um cadastro válido para a utilização de nossos Serviços.</p>
+
+                <form action="#" method="POST" class="form-container">
+                    
+                    <!-- SEÇÃO ÚNICA (CAMPOS UNIFICADOS) -->
+                    <div class="form-section">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="seuemail@dominio.com">
+                        
+                        <label for="senha" class="form-label">Senha</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="senha" class="form-input" placeholder="••••••••">
+                            <svg id="toggleSenha" class="password-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </div>
+                    
+                        <label for="nome" class="form-label">Nome Completo</label>
+                        <input type="text" id="nome" class="form-input" placeholder="Seu nome completo">
+
+                        <label for="nascimento" class="form-label">Data de nascimento</label>
+                        <input type="date" id="nascimento" class="form-input">
+
+                        <label for="endereco" class="form-label">Endereço (Opcional)</label>
+                        <input type="text" id="endereco" class="form-input" placeholder="Ex: Rua, Número, Bairro...">
+                    </div>
+                    
+                    <!-- ★★★ ID ADICIONADO AQUI ★★★ -->
+                    <button type="button" class="btn btn-primary" id="btnCadastrar">
+                        Próximo
+                    </button>
+
+                </form>
+            </main>
+        </div>
+    </div>
+    
+    <!-- SCRIPT CARREGADO -->
+    <script src="../js/cadastro.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo - Criar Treino</title>
+    <!-- Link para o CSS específico -->
+    <link rel="stylesheet" href="../css/criarTreino.css"> 
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- NAVEGAÇÃO DESKTOP -->
+        <nav class="sidebar-nav">
+            <div class="logo">Meu App</div>
+            <ul class="sidebar-nav-list">
+                <li>
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <!-- Ativo, pois é uma sub-página de Treinos -->
+                    <a href="treinos.html" class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" /></svg>
+                        <span>Treinos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="conta.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                        <span>Conta</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO ROLÁVEL -->
+        <div class="content-wrapper">
+            <header class="page-header">
+                <div class="header-title-wrapper">
+                     <a href="index.html" class="back-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <h1>Criar Treinos</h1>
+                </div>
+                <p>Recomendamos que um instrutor qualificado crie e gerencie seu Treino.</p>
+            </header>
+
+            <!-- Formulário de Criação -->
+            <main class="main-content">
+                <form action="#" method="POST" class="form-container">
+                    
+                    <!-- Seção 1: Detalhes do Treino -->
+                    <div class="form-section">
+                        <label for="treino-nome" class="form-label">Nome do Treino</label>
+                        <input type="text" id="treino-nome" class="form-input" placeholder="Ex: Treino A - Peito e Tríceps">
+                        
+                        <label for="treino-dia" class="form-label">Dia da Semana (Opcional)</label>
+                        <select id="treino-dia" class="form-input">
+                            <option value="">Nenhum dia específico</option>
+                            <option value="seg">Segunda-feira</option>
+                            <option value="ter">Terça-feira</option>
+                            <option value="qua">Quarta-feira</option>
+                            <option value="qui">Quinta-feira</option>
+                            <option value="sex">Sexta-feira</option>
+                            <option value="sab">Sábado</option>
+                            <option value="dom">Domingo</option>
+                        </select>
+                    </div>
+
+                    <!-- Seção 2: Exercícios -->
+                    <h2 class="section-title">Exercícios</h2>
+
+                    <!-- Exemplo de Card de Exercício 1 -->
+                    <div class="exercicio-card">
+                        <label for="ex1-nome" class="form-label-inline">Exercício 1</label>
+                        <input type="text" id="ex1-nome" class="form-input" placeholder="Ex: Supino Reto">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ex1-series" class="form-label-inline">Séries</label>
+                                <input type="number" id="ex1-series" class="form-input" placeholder="4">
+                            </div>
+                            <div class="form-group">
+                                <label for="ex1-reps" class="form-label-inline">Reps</label>
+                                <input type="text" id="ex1-reps" class="form-input" placeholder="8-12">
+                            </div>
+                        </div>
+                        
+                        <label for="ex1-obs" class="form-label-inline">Observação (Opcional)</label>
+                        <textarea id="ex1-obs" class="form-textarea" placeholder="Ex: Aumentar carga 2kg..."></textarea>
+                    </div>
+
+                    <!-- Exemplo de Card de Exercício 2 -->
+                    <div class="exercicio-card">
+                        <div class="exercicio-card-header">
+                            <label for="ex2-nome" class="form-label-inline">Exercício 2</label>
+                            <button type="button" class="btn-remover">Remover</button>
+                        </div>
+                        <input type="text" id="ex2-nome" class="form-input" placeholder="Ex: Crucifixo Inclinado">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ex2-series" class="form-label-inline">Séries</label>
+                                <input type="number" id="ex2-series" class="form-input" placeholder="3">
+                            </div>
+                            <div class="form-group">
+                                <label for="ex2-reps" class="form-label-inline">Reps</label>
+                                <input type="text" id="ex2-reps" class="form-input" placeholder="12">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-secondary-outline">
+                        + Adicionar Exercício
+                    </button>
+
+                    <button type="button" class="btn btn-primary" id="btnSalvarTreino">
+                        Salvar Treino
+                    </button>
+
+                </form>
+            </main>
+        </div>
+
+        <!-- NAVEGAÇÃO MOBILE -->
+        <nav class="mobile-nav">
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+                <span>Início</span>
+            </a>
+            <a href="treinos.html" class="active">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" /></svg>
+                <span>Treinos</span>
+            </a>
+            <a href="conta.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                <span>Conta</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- ★★★ SCRIPT ADICIONADO AQUI ★★★ -->
+    <!-- Colocamos na pasta 'js' e com o nome 'criarTreino.js' -->
+    <script src="../JS/criarTreino.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  # 1. O Cérebro: Backend (API Flask)
+  backend:
+    build: ./backend  # Aponta para a pasta 'backend' onde o Dockerfile estará
+    container_name: tcc_backend
+    restart: always
+    environment:
+      # Variáveis de ambiente para o Flask (lidas do arquivo .env)
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      # Variáveis de conexão com o banco de dados
+      - DB_HOST=db         # ★★★ IMPORTANTE: O host agora é o nome do serviço 'db'
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+    ports:
+      - "5000:5000"  # Expõe a porta 5000 do container para a porta 5000 da máquina
+    depends_on:
+      db:
+        condition: service_healthy # Só inicia o backend depois que o DB estiver pronto
+    networks:
+      - app-network
+
+  # 2. O Rosto: Frontend (React Web)
+  frontend:
+    build: ./frontend # Aponta para a pasta 'frontend' onde o Dockerfile estará
+    container_name: tcc_frontend
+    restart: always
+    ports:
+      - "3000:80"    # Expõe a porta 80 do Nginx para a porta 3000 da máquina
+    depends_on:
+      - backend      # Garante que o frontend inicie depois do backend
+    networks:
+      - app-network
+
+  # 3. O Coração: Banco de Dados (MySQL)
+  db:
+    image: mysql:8.0
+    container_name: tcc_db
+    restart: always
+    environment:
+      # Define as variáveis de ambiente para o container MySQL
+      - MYSQL_ROOT_PASSWORD=${DB_PASS} # Usa a mesma senha do .env
+      - MYSQL_DATABASE=${DB_NAME}      # Cria o banco de dados com o nome do .env
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - db-data:/var/lib/mysql # Garante que os dados do banco persistam
+      - ./tcc.sql:/docker-entrypoint-initdb.d/init.sql  # <--- ADICIONE ESTA LINHA
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u${DB_USER}", "-p${DB_PASS}"]
+      timeout: 10s
+      retries: 5
+    networks:
+      - app-network
+
+# Define as redes e volumes
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local

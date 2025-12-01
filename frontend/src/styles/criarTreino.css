@@ -1,0 +1,164 @@
+@import url('base.css');
+@import url('header.css'); /* Importa os estilos do header */
+
+/* --- Estilos da Página Criar Treino --- */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espaço entre seções e botões */
+}
+
+/* Título de seção (Ex: "Exercícios") */
+.section-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    color: #1F2937;
+    margin-top: 1rem;
+    margin-bottom: -0.5rem; /* Puxa o card para mais perto */
+    border-bottom: 2px solid #E5E7EB; /* Borda inferior */
+    padding-bottom: 0.5rem;
+}
+
+/* Container para inputs (Nome do Treino, Dia) */
+.form-section {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Espaço entre label e input */
+}
+
+/* Card para cada exercício */
+.exercicio-card {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-left: 4px solid #F97316; /* Destaque laranja */
+    margin-bottom: 25px;
+    
+    /* ★★★ ESTILOS DE ANIMAÇÃO ADICIONADOS ★★★ */
+    
+    /* Define o estado inicial para novos cards (usado pelo JS) */
+    opacity: 0;
+    transform: scale(0.95);
+    height: auto; /* Altura normal */
+    
+    /* Define a duração da transição para TODAS as propriedades */
+    transition: opacity 0.3s ease-out, 
+                transform 0.3s ease-out, 
+                height 0.3s ease-out, 
+                padding-top 0.3s ease-out, 
+                padding-bottom 0.3s ease-out, 
+                margin-top 0.3s ease-out, 
+                margin-bottom 0.3s ease-out,
+                border-width 0.3s ease-out;
+}
+
+/* Estilo para cards que já estão na página ou foram adicionados */
+.exercicio-card:not([style*="opacity: 0"]) {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Cabeçalho do card de exercício (para alinhar label e botão) */
+.exercicio-card-header {
+    display: flex;
+    justify-content: space-between; /* Empurra o label e o botão para cantos opostos */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Estilo do botão de remover */
+.btn-remover {
+    background: #EF4444;
+    border: none;
+    color: #f8f5f5; /* Cor vermelha (danger) */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* semibold */
+    padding: 0.25rem; /* Pequeno padding para facilitar o clique */
+    cursor: pointer;
+    border-radius: 0.5rem;
+    
+
+}
+.btn-remover:hover {
+    color: #f1c8c8; /* Vermelho mais escuro no hover */
+}
+
+
+/* Rótulos (Labels) */
+.form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+}
+.form-label-inline {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* medium */
+    color: #6B7280;
+}
+
+/* Inputs e Select */
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #D1D5DB; /* gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    background-color: #F9FAFB; /* gray-50 */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #F97316; /* Laranja no foco */
+    box-shadow: 0 0 0 2px #FFEDD5; /* Sombra laranja clara */
+}
+.form-textarea {
+    min-height: 80px;
+    resize: vertical; /* Permite ao usuário redimensionar verticalmente */
+}
+
+/* Layout para Séries/Reps lado a lado */
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+.form-group {
+    flex: 1; /* Ocupa espaço igual */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Botão "Adicionar Exercício" (Estilo Secundário) */
+.btn-secondary-outline {
+    background-color: transparent;
+    border: 2px dashed #D1D5DB; /* gray-300 */
+    color: #4B5563; /* gray-600 */
+    font-weight: 600;
+    padding: 0.75rem;
+    margin-top: 0; /* Reseta margin-top do .btn */
+    box-shadow: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn-secondary-outline:hover {
+    background-color: #F9FAFB; /* gray-50 */
+    border-color: #9CA3AF; /* gray-400 */
+}
+
+/* Botão Salvar (Primário) */
+.btn-primary {
+    margin-top: 1rem; /* Mais espaço acima do botão principal */
+}
+

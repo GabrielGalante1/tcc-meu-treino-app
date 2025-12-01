@@ -1,0 +1,31 @@
+/* Remove todas as margens e paddings padrões */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%; /* 1. HTML ocupa 100% da altura da janela */
+}
+
+body {
+  height: 100%;            /* 2. Body ocupa 100% da altura do HTML */
+      /* ★★★ Impede que o BODY tenha barra de rolagem ★★★ */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Um fundo cinza claro, se desejar */
+}
+
+/* * 3. A PEÇA-CHAVE QUE FALTAVA
+ * Este é o <div> onde o React é renderizado. Ele TAMBÉM precisa
+ * ter 100% de altura para passar a altura para o seu <App />
+*/
+#root {
+  height: 100%;
+  display: flex; /* Usa flexbox para garantir que o filho (.App) preencha o espaço */
+  flex-direction: column;
+}

@@ -1,0 +1,53 @@
+@import url('base.css');
+@import url('header.css'); /* Importa os estilos do header */
+
+/* --- Estilos da Página Meus Treinos --- */
+
+.meus-treinos-section {
+    margin-bottom: 2rem; 
+}
+
+/* Estilos para o "Empty State" (Estado Vazio) */
+.empty-state {
+    background-color: #ffe100; /* Fundo branco */
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 2rem 1.5rem; /* p-8 no desktop, p-6 no mobile */
+    text-align: center;
+    border: 5px dashed #000000;
+}
+
+.empty-state svg {
+    width: 3rem; /* h-12 */
+    height: 3rem; /* w-12 */
+    color: #9CA3AF; /* text-gray-400 */
+    margin: 0 auto 1rem; /* Centraliza e adiciona espaço abaixo */
+}
+
+.empty-state h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 1200; /* semibold */
+    color: #1F2937; /* text-gray-900 */
+}
+
+.empty-state p {
+    font-size: 3rem; /* text-base */
+    color: #000000; /* text-gray-500 */
+    margin-top: 0.5rem;
+    max-width: 400px; /* Limita largura do texto */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para o botão de ação dentro do empty state */
+.empty-state-btn {
+    width: auto; /* Largura automática */
+    display: inline-block; /* Permite centralizar */
+    margin-top: 1.5rem; /* Espaço acima */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.img-aviso
+{
+    width: 100%;
+}

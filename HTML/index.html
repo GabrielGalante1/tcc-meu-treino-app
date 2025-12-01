@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo - Home</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <nav class="sidebar-nav">
+            <div class="logo">Meu App</div>
+            <ul class="sidebar-nav-list">
+                <li>
+                    <a href="index.html" class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="treinos.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" /></svg>
+                        <span>Treinos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="conta.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                        <span>Conta</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+            <header class="page-header">
+                <h1>Olá, Gabriel.</h1>
+                <p class="page-subtitle">Veja um resumo do seu progresso.</p>
+                
+                <section class="header-card">
+                    <h2>Resumo Semanal</h2>
+                    <ul>
+                        <li>• Sequencia atual: <strong>4 Dias</strong> 🔥</li>
+                        <li>• Terminou treino 3 minutos mais rápido que a semana anterior.</li>
+                        <li class="warning">
+                            <span>⚠️</span>
+                            <span>Você está há 3 dias sem treinar.</span>
+                        </li>
+                    </ul>
+                </section>
+            </header>
+
+            <main class="main-content">
+                <section class="week-list">
+                    <h2>Semana</h2>
+                    
+                    <a href="meus-treinos.html" class="week-list-item-link"> 
+                        <div class="week-list-item">
+                            <div class="week-list-item-icon">
+                                <div class="icon-circle icon-red">×</div>
+                                <span class="day">Dom</span><span class="date">20/09</span>
+                            </div>
+                            <div class="week-list-item-content">
+                                <p>Você não concluiu seu Treino.</p>
+                                <div class="progress-bar"><div style="width: 43%;"></div></div>
+                                <div class="progress-text">
+                                    <span class="subtext">Durou 1 hora e 20 minutos.</span>
+                                    <span class="percent">43%</span>
+                                </div>
+                            </div>
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </div>
+                    </a>
+
+                    <a href="meus-treinos.html" class="week-list-item-link">
+                        <div class="week-list-item">
+                            <div class="week-list-item-icon">
+                                <div class="icon-circle icon-green">✓</div>
+                                <span class="day">Seg</span><span class="date">21/09</span>
+                            </div>
+                            <div class="week-list-item-content">
+                                <p>Você concluiu seu Treino com Êxito.</p>
+                                <div class="progress-bar"><div style="width: 100%;"></div></div>
+                                <div class="progress-text">
+                                    <span class="subtext">20 minutos mais rápido...</span>
+                                    <span class="percent">100%</span>
+                                </div>
+                            </div>
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </div>
+                    </a>
+
+                    <a href="meus-treinos.html" class="week-list-item-link">
+                        <div class="week-list-item today"> <div class="week-list-item-icon">
+                                <div class="icon-circle icon-gray">?</div>
+                                <span class="day">Ter</span><span class="date">22/09</span>
+                            </div>
+                            <div class="week-list-item-content">
+                                <p>Você não concluiu seu Treino.</p>
+                                <div class="progress-bar"><div style="width: 0%;"></div></div>
+                                <div class="progress-text">
+                                    <span class="subtext"></span>
+                                    <span class="percent">0%</span>
+                                </div>
+                            </div>
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </div>
+                    </a>
+
+                    <a href="meus-treinos.html" class="week-list-item-link">
+                        <div class="week-list-item">
+                            <div class="week-list-item-icon">
+                                <div class="icon-circle icon-green">✓</div>
+                                <span class="day">Seg</span><span class="date">21/09</span>
+                            </div>
+                            <div class="week-list-item-content">
+                                <p>Você concluiu seu Treino com Êxito.</p>
+                                <div class="progress-bar"><div style="width: 100%;"></div></div>
+                                <div class="progress-text">
+                                    <span class="subtext">20 minutos mais rápido...</span>
+                                    <span class="percent">100%</span>
+                                </div>
+                            </div>
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </div>
+                    </a>
+                    
+                    <a href="meus-treinos.html" class="week-list-item-link">
+                        <div class="week-list-item">
+                            <div class="week-list-item-icon">
+                                <div class="icon-circle icon-green">✓</div>
+                                <span class="day">Seg</span><span class="date">21/09</span>
+                            </div>
+                            <div class="week-list-item-content">
+                                <p>Você concluiu seu Treino com Êxito.</p>
+                                <div class="progress-bar"><div style="width: 100%;"></div></div>
+                                <div class="progress-text">
+                                    <span class="subtext">20 minutos mais rápido...</span>
+                                    <span class="percent">50%</span>
+                                </div>
+                            </div>
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </div>
+                    </a>
+                </section>
+            </main>
+        </div>
+
+        <nav class="mobile-nav">
+            <a href="index.html" class="active">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+                <span>Início</span>
+            </a>
+            <a href="treinos.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" /></svg>
+                <span>Treinos</span>
+            </a>
+            <a href="conta.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                <span>Conta</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>
